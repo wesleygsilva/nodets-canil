@@ -41,15 +41,3 @@ export const cats = (req: Request, res: Response) => {
     })
 }
 
-export const fishes = (req: Request, res: Response) => {
-    let list = Pet.getFromType('fish')
-
-    res.render('pages/page', {
-        menu: createMenuObject('fish'),
-        banner: {
-            title: 'Peixes',
-            background: 'banner_fish.jpg'
-        },
-        list   
-    })
-}
